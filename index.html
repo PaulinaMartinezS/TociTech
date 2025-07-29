@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TociTech - Componentes de PC y Laptops</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">TociTech</h1>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Inicio</a></li>
+                    <li class="nav-item"><a href="#products" class="nav-link">Productos</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">Nosotros</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="cart-icon-container">
+                    <i class="fas fa-shopping-cart cart-icon"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </nav>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay">
+        <div class="mobile-nav-menu">
+            <i class="fas fa-times close-mobile-nav"></i>
+            <ul class="mobile-nav-list">
+                <li><a href="#home" class="mobile-nav-link">Inicio</a></li>
+                <li><a href="#products" class="mobile-nav-link">Productos</a></li>
+                <li><a href="#about" class="mobile-nav-link">Nosotros</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="add-to-cart-message" class="add-to-cart-message">
+        Producto añadido al carrito <i class="fas fa-check-circle"></i>
+    </div>
+
+    <div id="checkout-confirmation-message" class="checkout-confirmation-message">
+        ¡Pago realizado con éxito! Gracias por tu compra. <i class="fas fa-check-circle"></i>
+    </div>
+
+    <!-- Carrusel de imágenes -->
+    <section id="home" class="hero-section">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="https://www.clarin.com/2023/06/04/dl-X8doTX_1200x0__1.jpg"
+                    alt="Potencia Inigualable para tu PC" class="carousel-image">
+                <div class="carousel-caption">
+                    <h2>Potencia Inigualable</h2>
+                    <p>Descubre los componentes que llevarán tu experiencia al siguiente nivel.</p>
+                    <a href="#products" class="btn btn-primary">Explorar Productos</a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://thumbs.dreamstime.com/b/pc-de-juegos-con-luces-led-rgb-en-un-equipo-montado-componentes-hardware-colores-185705787.jpg"
+                    alt="Rendimiento Extremo para Gamers" class="carousel-image">
+                <div class="carousel-caption">
+                    <h2>Rendimiento Extremo</h2>
+                    <p>Componentes de última generación para gamers y profesionales.</p>
+                    <a href="#products" class="btn btn-primary">Ver Ofertas</a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BGBD_STG/on/demandware.static/-/Library-Sites-SorianaSharedLib/default/dw5cd6b11c/.001_SearchBanner/SEO/SETUP%20GAMER.png"
+                    alt="Innovación y Calidad en cada componente" class="carousel-image">
+                <div class="carousel-caption">
+                    <h2>Innovación y Calidad</h2>
+                    <p>Construye tu equipo soñado con la mejor tecnología.</p>
+                    <a href="#products" class="btn btn-primary">Personaliza tu PC</a>
+                </div>
+            </div>
+            <button class="carousel-nav prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-nav next"><i class="fas fa-chevron-right"></i></button>
+            <div class="carousel-dots"></div>
+        </div>
+    </section>
+
+    <!-- Sección de Categorías de Productos Destacadas -->
+    <section class="featured-categories">
+        <div class="container">
+            <h3>Categorías Destacadas</h3>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2vSxsedG7WtR3tP4UuZfXONjPt3JK2qoCzA&s"
+                        alt="Procesadores">
+                    <h4>Procesadores</h4>
+                    <p>El cerebro de tu PC, con la última tecnología y rendimiento sin igual.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="cpu">Ver CPUs</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://i.blogs.es/09647f/grafica/1366_2000.jpeg" alt="Tarjetas Gráficas">
+                    <h4>Tarjetas Gráficas</h4>
+                    <p>Imágenes impresionantes y rendimiento gráfico superi or para gaming y diseño.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="gpu">Ver GPUs</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://a-static.mlcdn.com.br/1500x1500/memoria-ram-8gb-ddr4-hyperx-fury-2400mhz-com-dissipador/magazineluiza/227723300/29e16aa7fae514c0bc5e2f485ced61e0.jpg"
+                        alt="Memorias RAM">
+                    <h4>Memorias RAM</h4>
+                    <p>Velocidad y multitarea sin límites para un flujo de trabajo impecable.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="ram">Ver RAM</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://m.media-amazon.com/images/I/71y8ZxXgVOL.jpg" alt="Almacenamiento">
+                    <h4>Almacenamiento</h4>
+                    <p>SSD ultrarrápidos y HDD de gran capacidad para todos tus archivos.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="almacenamiento">Ver
+                        Almacenamiento</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://img.pccomponentes.com/pcblog/1736809200000/que-es-una-placa-base-tipos-instalar-2.jpg"
+                        alt="Placas Base">
+                    <h4>Placas Base</h4>
+                    <p>La base sólida para construir tu sistema, con soporte para lo último en tecnología.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="placa">Ver Placas</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://gamefactor.mx/images/detalle/psg105071011690914311.png" alt="Fuentes de Poder">
+                    <h4>Fuentes de Poder</h4>
+                    <p>Energía estable y eficiente para todos tus componentes, garantizando seguridad.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="fuente">Ver Fuentes</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://www.geekno.com/wp-content/uploads/2019/11/refrigeracion-liquida-1280x720.jpg"
+                        alt="Refrigeración">
+                    <h4>Refrigeración</h4>
+                    <p>Mantén tu equipo a la temperatura ideal con soluciones de aire y líquido.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="refrigeracion">Ver
+                        Refrigeración</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://www.xtremepc.com.mx/cdn/shop/files/c377a71d-9949-42e6-89cb-d15bd554b428_800x.png?v=1732269565"
+                        alt="Gabinetes">
+                    <h4>Gabinetes</h4>
+                    <p>Estilo y funcionalidad para proteger y exhibir tus componentes.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="gabinete">Ver Gabinetes</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://i5.walmartimages.com.mx/samsmx/images/product-images/img_large/981010711l.jpg"
+                        alt="Monitores">
+                    <h4>Monitores</h4>
+                    <p>Experimenta imágenes nítidas y colores vibrantes con nuestros monitores de alta gama.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="monitor">Ver Monitores</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://ergo2play.com/cdn/shop/articles/M314_1080x.jpg?v=1633105598" alt="Periféricos">
+                    <h4>Periféricos</h4>
+                    <p>Completa tu setup con teclados, ratones y auriculares diseñados para el máximo rendimiento.</p>
+                    <a href="#products" class="btn btn-secondary category-link" data-category="periferico">Ver
+                        Periféricos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Productos -->
+    <section id="products" class="product-section">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+            <div class="product-filters">
+                <button class="btn btn-filter active" data-category="all">Mostrar Todos</button>
+            </div>
+            <div class="product-grid">
+                <!-- Producto 1: Procesador -->
+                <div class="product-card" data-id="cpu001" data-name="Intel Core i9-14900K" data-price="599.99" data-category="cpu">
+                    <img src="https://cdn1.coppel.com/images/catalog/mkp/3985/3000/39851115-6.jpg?iresize=width:400,height:320"
+                        alt="Intel Core i9-14900K">
+                    <div class="product-info">
+                        <h3>Intel Core i9-14900K</h3>
+                        <p class="product-description">El procesador más potente para gaming y creación de contenido,
+                            con 24 núcleos y 32 hilos, ideal para multitarea extrema.</p>
+                        <p class="product-price">$599.99</p>
+                        <button class="btn btn-add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <!-- Producto 2: Tarjeta Gráfica -->
+                <div class="product-card" data-id="gpu001" data-name="NVIDIA GeForce RTX 4090" data-price="1599.99" data-category="gpu">
+                    <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ada/rtx-4090/geforce-ada-4090-web-og-1200x630.jpg"
+                        alt="NVIDIA GeForce RTX 4090">
+                    <div class="product-info">
+                        <h3>NVIDIA GeForce RTX 4090</h3>
+                        <p class="product-description">Rendimiento gráfico extremo para los juegos más exigentes y
+                            aplicaciones profesionales de renderizado, con 24GB GDDR6X.</p>
+                        <p class="product-price">$1599.99</p>
+                        <button class="btn btn-add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <!-- Producto 3: Memoria RAM -->
+                <div class="product-card" data-id="ram001" data-name="Corsair Vengeance RGB DDR5 32GB" data-price="129.99" data-category="ram">
+                    <img src="https://m.media-amazon.com/images/I/71O+5BneBVL.jpg"
+                        alt="Corsair Vengeance RGB DDR5 32GB">
+                    <div class="product-info">
+                        <h3>Corsair Vengeance RGB DDR5 32GB</h3>
+                        <p class="product-description">Memoria RAM de alta velocidad (6000MHz) con iluminación RGB
+                            personalizable para un estilo único y rendimiento superior.</p>
+                        <p class="product-price">$129.99</p>
+                        <button class="btn btn-add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <!-- Producto 4: SSD -->
+                <div class="product-card" data-id="ssd001" data-name="Samsung 990 Pro 2TB NVMe SSD" data-price="189.99" data-category="almacenamiento">
+                    <img src="https://m.media-amazon.com/images/I/61D9foQdhDL.jpg" alt="Samsung 990 Pro 2TB NVMe SSD">
+                    <div class="product-info">
+                        <h3>Samsung 990 Pro 2TB NVMe SSD</h3>
+                        <p class="product-description">Almacenamiento ultrarrápido con velocidades de lectura de hasta
+                            7450 MB/s para cargas instantáneas de juegos y aplicaciones.</p>
+                        <p class="product-price">$189.99</p>
+                        <button class="btn btn-add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <!-- Producto 5: Placa Base -->
+                <div class="product-card" data-id="mobo001" data-name="ASUS ROG Strix Z790-E Gaming WiFi II" data-price="429.99" data-category="placa">
+                    <img src="https://ddtech.mx/assets/uploads/3c6bbe5315216a97b5ac620aefb31dbf.png"
+                        alt="ASUS ROG Strix Z790-E Gaming WiFi II">
+                    <div class="product-info">
+                        <h3>ASUS ROG Strix Z790-E Gaming WiFi II</h3>
+                        <p class="product-description">Placa base de alto rendimiento para procesadores Intel de
+                            12ª/13ª/14ª Gen, con WiFi 6E y PCIe 5.0 para máxima conectividad.</p>
+                        <p class="product-price">$429.99</p>
+                        <button class="btn btn-add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <!-- Producto 6: Fuente de Poder -->
+                <div class="product-card" data-id="psu001" data-name="Corsair RM1000e 1000W 80 Plus Gold" data-price="169.99" data-category="fuente">
+                    <img src="https://m.media-amazon.com/images/I/61vo2tq0kAL.jpg"
+                        alt="Corsair RM1000e 1000W 80 Plus Gold">
+                    <div class="product-info">
+                        <h3>Corsair RM1000e 1000W 80 Plus Gold</h3>
+                        <p class="product-description">Fuente de poder modular de 1000W con certificación 80 Plus Gold,
+                            silenciosa, eficiente y con 10 años de garantía.</p>
+                        <p class="product-price">$169.99</p>
+                        <button class="btn btn-add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <!-- Producto 7: Refrigeración Líquida -->
+                <div class="product-card" data-id="cooler001" data-name="NZXT Kraken Z73 RGB 360mm AIO" data-price="279.99" data-category="refrigeracion">
+                    <img src="https://www.bhphotovideo.com/images/fb/nzxt_rl_krz73_r1_kraken_z73_360mm_all_in_one_1720812.jpg"
+                        alt="NZXT Kraken Z73 RGB 360mm AIO">
+                    <div class="product-info">
+                        <h3>NZXT Kraken Z73 RGB 360mm AIO</h3>
+                        <p class="product-description">Refrigeración líquida de alto rendimiento con pantalla LCD
+                            personalizable para monitorear tu sistema y añadir estilo.</p>
+                        <p class="product-price">$279.99</p>
+                        <button class="btn btn-add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <!-- Producto 8: Gabinete -->
+                <div class="product-card" data-id="case001" data-name="Lian Li O11 Dynamic EVO" data-price="189.99" data-category="gabinete">
+                    <img src="https://ddtech.mx/assets/uploads/2f8ba095bb9840ac3fb01cf47d42230e.png"
+                        alt="Lian Li O11 Dynamic EVO">
+                    <div class="product-info">
+                        <h3>Lian Li O11 Dynamic EVO</h3>
+                        <p class="product-description">Gabinete modular de doble cámara con excelente flujo de aire,
+                            soporte para configuraciones avanzadas y un diseño elegante.</p>
+                        <p class="product-price">$189.99</p>
+                        <button class="btn btn-add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <!-- Producto 9: Monitor -->
+                <div class="product-card" data-id="monitor001" data-name="Dell Alienware AW3423DWF QD-OLED" data-price="999.99" data-category="monitor">
+                    <img src="https://m.media-amazon.com/images/I/41vuCVAu04L.jpg"
+                        alt="Dell Alienware AW3423DWF QD-OLED">
+                    <div class="product-info">
+                        <h3>Dell Alienware AW3423DWF QD-OLED</h3>
+                        <p class="product-description">Monitor gaming QD-OLED de 34 pulgadas con 165Hz y 0.1ms de
+                            respuesta para una inmersión total y colores vibrantes.</p>
+                        <p class="product-price">$999.99</p>
+                        <button class="btn btn-add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <!-- Producto 10: Teclado Mecánico -->
+                <div class="product-card" data-id="keyboard001" data-name="Keychron K8 Pro QMK/VIA" data-price="109.99" data-category="periferico">
+                    <img src="https://i.ytimg.com/vi/giCppUqr4J0/maxresdefault.jpg" alt="Keychron K8 Pro QMK/VIA">
+                    <div class="product-info">
+                        <h3>Keychron K8 Pro QMK/VIA</h3>
+                        <p class="product-description">Teclado mecánico tenkeyless con switches Gateron Brown y soporte
+                            QMK/VIA para personalización avanzada y comodidad.</p>
+                        <p class="product-price">$109.99</p>
+                        <button class="btn btn-add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <!-- Producto 11: Ratón Gaming -->
+                <div class="product-card" data-id="mouse001" data-name="Logitech G Pro X Superlight" data-price="129.99" data-category="periferico">
+                    <img src="https://www.profesionalreview.com/wp-content/uploads/2020/11/logitech-g-pro-x-superlight.jpg"
+                        alt="Logitech G Pro X Superlight">
+                    <div class="product-info">
+                        <h3>Logitech G Pro X Superlight</h3>
+                        <p class="product-description">Ratón gaming inalámbrico ultraligero (63g) con sensor HERO 25K
+                            para precisión y velocidad inigualables.</p>
+                        <p class="product-price">$129.99</p>
+                        <button class="btn btn-add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <!-- Producto 12: Auriculares Gaming -->
+                <div class="product-card" data-id="headset001" data-name="SteelSeries Arctis Nova Pro Wireless" data-price="349.99" data-category="periferico">
+                    <img src="https://www.gadgetmatch.com/wp-content/uploads/2022/06/steelseries-arctis-nova-pro-wireless-gadgetmatch-20220623.jpg"
+                        alt="SteelSeries Arctis Nova Pro Wireless">
+                    <div class="product-info">
+                        <h3>SteelSeries Arctis Nova Pro Wireless</h3>
+                        <p class="product-description">Auriculares gaming inalámbricos con audio de alta fidelidad,
+                            cancelación de ruido activa y doble batería intercambiable.</p>
+                        <p class="product-price">$349.99</p>
+                        <button class="btn btn-add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección "Sobre Nosotros" -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>Nuestra Trayectoria: Más de una Década de Innovación</h2>
+            <p class="about-intro">Desde un pequeño taller hasta convertirnos en un referente nacional, nuestra pasión
+                por la tecnología y el compromiso contigo han sido siempre nuestro motor.</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2010 - El Origen de TociTech</h4>
+                        <p>Nace TociTech, fundado por un grupo de entusiastas con la visión de ofrecer componentes de PC
+                            de alto rendimiento y un servicio técnico sin igual en nuestra ciudad.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2014 - Apertura de la Primera Tienda Física</h4>
+                        <p>Inauguramos nuestra primera tienda, creando un espacio para que la comunidad gamer y los
+                            profesionales de la tecnología pudieran encontrar asesoría experta y los mejores
+                            componentes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2017 - Conquistando el Mundo Digital</h4>
+                        <p>Lanzamos nuestra plataforma de e-commerce, TociTech.com, y activamos los <strong>envíos a
+                                todo el país</strong>, llevando nuestra calidad y servicio a cada rincón de México.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2021 - Reconocimiento en la Industria</h4>
+                        <p>Somos galardonados como "Mejor Tienda de Componentes de PC del Año" por nuestra dedicación a
+                            la calidad, innovación y la satisfacción de miles de clientes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Hoy y Hacia el Futuro</h4>
+                        <p>Con más de una década de experiencia, seguimos innovando y expandiendo nuestro catálogo para
+                            ser tu aliado de confianza en la construcción de la tecnología del mañana.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes alguna pregunta, necesitas asesoramiento o quieres saber más sobre nuestros productos? ¡Estamos
+                aquí para ayudarte!</p>
+            <form class="contact-form">
+                <div class="form-message"></div> <!-- Mensajes de validación -->
+                <div class="form-group">
+                    <label for="name">Nombre Completo:</label>
+                    <input type="text" id="name" name="name" required placeholder="Ej: Juan Pérez">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required placeholder="Ej: tu.email@dominio.com">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Asunto:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Ej: Consulta sobre Tarjetas Gráficas">
+                </div>
+                <div class="form-group">
+                    <label for="message">Tu Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required
+                        placeholder="Escribe tu consulta aquí..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Carrito de Compras (Modal/Sidebar) -->
+    <div class="shopping-cart-overlay">
+        <div class="shopping-cart">
+            <div class="cart-header">
+                <h3>Tu Carrito de Compras</h3>
+                <i class="fas fa-times close-cart"></i>
+            </div>
+            <div class="cart-items">
+                <!-- Los productos añadidos se insertarán aquí con JavaScript -->
+                <p class="empty-cart-message">Tu carrito está vacío.</p>
+            </div>
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+                <div class="cart-delivery">
+                    <label for="delivery-option">Opción de Entrega:</label>
+                    <select id="delivery-option">
+                        <option value="standard" data-cost="10.00">Estándar (3-5 días) - $10.00</option>
+                        <option value="express" data-cost="25.00">Express (1-2 días) - $25.00</option>
+                        <option value="pickup" data-cost="0.00">Recogida en tienda (Gratis)</option>
+                    </select>
+                </div>
+                <div class="cart-total final-total">
+                    <span>Total Final:</span>
+                    <span id="cart-final-total">$0.00</span>
+                </div>
+                <button class="btn btn-checkout">Proceder al Pago</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página único -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-quote">
+                <p>"Construyendo el futuro, un componente a la vez."</p>
+                <p>&copy; 2025 TociTech. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-cta">
+                <h4>¿Listo para potenciar tu equipo?</h4>
+                <a href="#products" class="btn btn-primary">Explora Ahora</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
