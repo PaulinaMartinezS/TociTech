@@ -1,2 +1,2 @@
-# Tocitec
-Equipo Tocitec
+# TociTech
+Equipo TociTech
